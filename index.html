@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<link href="https://chrome.google.com/webstore/detail/heehjpdocpefckjobfgnfdbhoebhphkf" rel="chrome-webstore-item">
+		<title>红杏教程</title>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="static/reveal/css/reveal.min.css">
+		<link rel="stylesheet" href="static/reveal/css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="static/reveal/css/my.css">
+		<link rel="stylesheet" href="static/reveal/jquery.remodal.css">
+		<link rel="stylesheet" href="static/reveal/animate.min.css">
+		<!--[if lt IE 9]>
+			<script src="/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal remodal-bg">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-background="#BF4A40">
+					<h2>3分钟教会你</h2>
+					<h1>红杏出墙</h1>
+					<p>
+						<br> 请按 “右方向键（→）” 继续
+						<br>
+						<br>
+					</p>
+				</section>
+				<section data-background="#BF4A40">
+					<h3>安装，登录之后</h3>
+					<p>
+						红杏就开始默默地发挥作用了
+					</p>
+					<small>（你可能会需要先成为VIP）</small>
+				</section>
+				<section data-background="#BF4A40">
+					<h3>你会发现</h3>
+					<p>facebook, twitter, google+ 这些</p>
+					<p>很难打开的网站已经能够轻松打开了</p>
+				</section>
+				<section data-background="#BF4A40">
+					<h3>当红杏对当前网站起作用时，<br>图标就会变成绿色</h3>
+					<img class="fragment" src="static/img/guide/icon-color.png">
+				</section>
+				<section data-background="#BF4A40">
+					<h3>红杏只在需要时发挥作用</h3>
+					<h3>不会影响普通网页的打开速度</h3>
+				</section>
+				<section data-background="#BF4A40">
+					<h3>红杏很聪明</h3>
+					<h3>ta 会自动发现当前页面中的问题域名</h3>
+					<img class="fragment" src="static/img/guide/discover.png">
+				</section>
+				<section data-background="#BF4A40">
+					<h3>这时，点击红杏图标就能</h3>
+					<h3>立即解决 这些域名的访问障碍</h3>
+					<img class="fragment" src="static/img/guide/discover2.png">
+				</section>
+				<section data-background="#BF4A40">
+					<h3>如果实在不行</h3>
+					<h3>你也可以打开“一直”模式</h3>
+					<div class="fragment">
+						<img src="static/img/guide/always.png">
+						<p>这时，所有访问都会通过红杏</p>
+						<p>（这能解决99%的问题，不过副作用是访问普通网站会变慢）</p>
+					</div>
+				</section>
+				<section data-background="#BF4A40">
+					<h3>这些就是红杏的主要功能了</h3>
+					<h3>是不是很简单呢？</h3>
+					<small><br>谢谢耐心观看，祝亲上网愉快！</small>
+				</section>
+			</div>
+		</div>
+		<script src="static/js/jquery-1.8.2.min.js"></script>
+		<script src="static/reveal/lib/js/head.min.js"></script>
+		<script src="static/reveal/js/reveal.min.js"></script>
+		<script src="static/reveal/jquery.remodal.min.js"></script>
+		<script>
+			(function(i, s, o, g, r, a, m) {
+				i['GoogleAnalyticsObject'] = r;
+				i[r] = i[r] || function() {
+					(i[r].q = i[r].q || []).push(arguments)
+				}, i[r].l = 1 * new Date();
+				a = s.createElement(o),
+					m = s.getElementsByTagName(o)[0];
+				a.async = 1;
+				a.src = g;
+				m.parentNode.insertBefore(a, m)
+			})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+			ga('create', 'UA-22253493-11');
+			ga('send', 'pageview', '/guide/');
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+				dependencies: [{
+					src: 'static/reveal/lib/js/classList.js',
+					condition: function() {
+						return !document.body.classList;
+					}
+				}, {
+					src: 'static/reveal/plugin/zoom-js/zoom.js',
+					async: true,
+					condition: function() {
+						return !!document.body.classList;
+					}
+				}]
+			});
+			Reveal.addEventListener('slidechanged', function(event) {
+				ga('send', 'pageview', 'guide/slides/' + event.indexh + '/' + event.indexv);
+			});
+		</script>
+	</body>
+
+</html>
